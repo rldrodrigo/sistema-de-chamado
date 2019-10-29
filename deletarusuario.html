@@ -5,6 +5,7 @@
        <title>Sistema de Chamados</title>
        <link rel="stylesheet" type="text/css"  href="estilo.css" />
        <link rel="stylesheet" type="text/css"  href="estilomenulateral.css" />
+       <link rel="stylesheet" type="text/css"  href="estiloform.css" />
    </head>
    <body>
      <div id='menuprincipal'>
@@ -32,9 +33,9 @@
             <li><a href="#"> Usuário</a>
               <ul>
                 <li><a href="cadastrarusuario.html">Cadastrar Usuário</a></li>
-                <li><a href="#">Consultar Usuário</a></li>
-                <li ><a href="#">Alterar Usuário</a></li>
-                <li ><a href="#">Deletar Usuário</a></li>
+                <li><a href="consultarusuario.html">Consultar Usuário</a></li>
+                <li ><a href="alterarusuario.html">Alterar Usuário</a></li>
+                <li ><a href="deletarusuario.html">Deletar Usuário</a></li>
               </ul>
             </li>
             <li><a href="#"> Chamados</a>
@@ -60,7 +61,13 @@
     </div> <!-- /#lateral -->
 
     <div id='centro'>
-      <img src = "images/Usuarios.jpg" href="main.html"  width="auto" height="auto"/>
+      <div id = 'formulario'>
+        <form method="POST" name="deletarusuario" action="deletarusuario.php">
+         <label> CPF: </label><input type="text" name="cpf" placeholder="CPF">
+
+         <input type="submit" name="enviar1" value="Apagar" id="btnEnviar">
+      </form>
+      </div>
     </div>
    </body>
 </html>

@@ -62,22 +62,65 @@
 
     <div id='centro'>
       <div id = 'formulario'>
-        <form method="POST" name="cadastrarusuario" action="cadastra  usuario.php" >
-			         <label> CPF: </label><input type="text" name="cpf" placeholder="CPF" required>
+        <?php
 
-        		   <label> Nome: </label><input type="text" name="nome" placeholder="Nome" required>
 
-               <label> Tipo: </label><select class="select" name="tipo" required>
-                <option value="Usuário Comum"> Usuário Comum</option>
-                <option value="Adminstrador">Administrador</option>
-               </select>
-               <br>
-							 <label> Senha: </label><input type="password" name="senha" placeholder="Senha" required>
+         //$cn = mysqli_connect('localhost','','') or die("ERRO NA CONEXÃO COM O MYSQL");
+         $link = mysqli_connect("localhost", "root", "", "chamado");
+         //mysql_select_db('salao',$link) or die("ERRO NA CONEXÃO COM O BANCO DE DADOS");
+         mysqli_set_charset($link, "utf-8");
 
-              <div id="botaoEnviar">
-        			<input type="submit" name="enviar" value="Cadastrar" id="btnEnviar">
-              </div>
-        </form>
+
+
+         $cpf=$_POST['cpf'];
+         $tipo = $_POST['tipo'];
+
+         $sql = mysqli_query($link, 'SELECT * from usuario') or die("Erro");
+         while($dados=mysqli_fetch_assoc($sql)){
+             if($cpf == $dados['cpf']){
+
+             echo "<div class='usuario'>";
+               echo "<img src = 'images/usuario.png' width='auto' height='100px'/>";
+               echo "<div class='dados'> ";
+               echo "<br><label> Nome: </label>";
+               echo $dados['nome'].'<br>';
+               echo "<label> Cargo: </label>";
+               echo $dados['tipo'].'<br>';
+               echo "<label> CPF: </label>";
+               echo $dados['cpf'].'<br>';
+               echo "</div>";
+             echo "</div>";
+
+           }
+            if($tipo == $dados['tipo']){
+              echo "<div class='usuario'>";
+               echo "<img src = 'images/usuario.png' width='auto' height='100px'/>";
+               echo "<div class='dados'> ";
+               echo "<br><label> Nome: </label>";
+               echo $dados['nome'].'<br>';
+               echo "<label> Cargo: </label>";
+               echo $dados['tipo'].'<br>';
+               echo "<label> CPF: </label>";
+               echo $dados['cpf'].'<br>';
+               echo "</div>";
+             echo "</div>";
+           }
+           if($cpf == '' && $tipo == ''){
+             echo "<div class='usuario'>";
+               echo "<img src = 'images/usuario.png' width='auto' height='100px'/>";
+               echo "<div class='dados'> ";
+               echo "<br><label> Nome: </label>";
+               echo $dados['nome'].'<br>';
+               echo "<label> Cargo: </label>";
+               echo $dados['tipo'].'<br>';
+               echo "<label> CPF: </label>";
+               echo $dados['cpf'].'';
+               echo "</div>";
+             echo "</div>";
+           }
+         }
+
+?>
       </div>
     </div>
    </body>

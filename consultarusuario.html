@@ -62,21 +62,15 @@
 
     <div id='centro'>
       <div id = 'formulario'>
-        <form method="POST" name="cadastrarusuario" action="cadastra  usuario.php" >
-			         <label> CPF: </label><input type="text" name="cpf" placeholder="CPF" required>
+        <form method="POST" name="consultarusuario" action="consultarusuario.php" >
+           <label> CPF: </label><input type="text" name="cpf" placeholder="CPF">
+           <label> Tipo: </label><select class="select" name="tipo">
+             <option value="">Selecione um tipo </option>
+            <option value="Secretaria"> Administrador</option>
+            <option value="Gerente">Usuário Comum</option>
+           </select>
 
-        		   <label> Nome: </label><input type="text" name="nome" placeholder="Nome" required>
-
-               <label> Tipo: </label><select class="select" name="tipo" required>
-                <option value="Usuário Comum"> Usuário Comum</option>
-                <option value="Adminstrador">Administrador</option>
-               </select>
-               <br>
-							 <label> Senha: </label><input type="password" name="senha" placeholder="Senha" required>
-
-              <div id="botaoEnviar">
-        			<input type="submit" name="enviar" value="Cadastrar" id="btnEnviar">
-              </div>
+           <input type="submit" name="enviar1" value="Consultar" id="btnEnviar">
         </form>
       </div>
     </div>
