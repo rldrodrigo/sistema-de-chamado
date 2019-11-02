@@ -1,11 +1,6 @@
 <?php
-
-
-
     $link = mysqli_connect("localhost", "root", "", "chamado");
-
     mysqli_set_charset($link, "utf-8");
-
 
     $cpf=$_POST['cpf'];
 		$nome=$_POST['nome'];

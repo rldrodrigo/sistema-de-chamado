@@ -13,10 +13,10 @@
         </li>
         <li><a href="#"> Chamados</a>
           <ul>
-            <li><a href="#">Cadastrar Chamado</a></li>
-            <li><a href="#">Consultar Chamado</a></li>
-            <li ><a href="#">Alterar Chamado</a></li>
-            <li ><a href="#">Deletar Chamado</a></li>
+            <li><a href="cadastrachamado.php">Cadastrar Chamado</a></li>
+            <li><a href="consultachamado.php">Consultar Chamado</a></li>
+            <li ><a href="alterachamado.php">Alterar Chamado</a></li>
+            <li ><a href="deletachamado.php">Deletar Chamado</a></li>
           </ul>
         </li>
         <li><a href="#"> Técnico</a>

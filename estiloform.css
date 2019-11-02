@@ -35,6 +35,8 @@ input, textarea {
 		margin:2px;
 }
 
+
+
 input:focus, textarea:focus {
     /* Dar um pouco de destaque nos elementos ativos */
     border-color: #000;

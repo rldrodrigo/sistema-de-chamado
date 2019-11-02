@@ -15,21 +15,15 @@
 
      <div id = 'formulario'>
        <?php
-
-
-        //$cn = mysqli_connect('localhost','','') or die("ERRO NA CONEXÃO COM O MYSQL");
         $link = mysqli_connect("localhost", "root", "", "chamado");
-        //mysql_select_db('salao',$link) or die("ERRO NA CONEXÃO COM O BANCO DE DADOS");
         mysqli_set_charset($link, "utf-8");
-
-
         $sql = mysqli_query($link, 'SELECT * from servico') or die("Erro");
         while($dados=mysqli_fetch_assoc($sql)){
             echo "<div class='servico'>";
               echo "<div class='dados'> ";
               echo "<br><label> Nome: </label>";
               echo $dados['nome'].'<br>';
-              echo "<label> Cargo: </label>";
+              echo "<label> Descrição: </label>";
               echo $dados['descricao'].'<br>';
               echo "</div>";
             echo "</div>";

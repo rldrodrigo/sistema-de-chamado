@@ -21,6 +21,7 @@
 
                <label> Tipo: </label><select class="select" name="tipo" required>
                 <option value="Usuário Comum"> Usuário Comum</option>
+                <option value="Técnico"> Técnico</option>
                 <option value="Adminstrador">Administrador</option>
                </select>
                <br>

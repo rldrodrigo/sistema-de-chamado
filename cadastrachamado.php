@@ -17,32 +17,32 @@
       <div id = 'formulario'>
         <form method="POST" name="cadastrarusuario" action="cadastrarchamado.php">
 			         <label> Título: </label><input type="text" name="titulo" placeholder="Título" required>
-
-               <label> Prioridade: </label><select class="select" name="tipo" required>
-
+               <label> Prioridade: </label><select class="select" name="prioridade" required>
                 <option value="1"> Alta</option>
-
                 <option value="2">Média</option>
-
                 <option value="3">Baixa</option>
-
                </select>
                <br>
-
                <label> Técnico: </label><select class="select" name="tecnico" required>
-
-                <option value="1"> Alta</option>
-
-                <option value="2">Média</option>
-
-                <option value="3">Baixa</option>
-
-               </select>
-               <br>
-
-
-
-							 <label> Senha: </label><input type="password" name="senha" placeholder="Senha" required>
+               <?php
+                $link = mysqli_connect("localhost", "root", "", "chamado");
+                mysqli_set_charset($link, "utf-8");
+                $sql = mysqli_query($link, 'SELECT * from tecnico') or die("Erro");
+                while($dados=mysqli_fetch_assoc($sql)){
+                      echo "<option value='".$dados['nome']."'>".$dados['nome']."</option>";
+                }
+                ?>
+              </select> </br>
+              <label> Categoria: </label><select class="select" name="categoria" required>
+              <?php
+               $link = mysqli_connect("localhost", "root", "", "chamado");
+               mysqli_set_charset($link, "utf-8");
+               $sql = mysqli_query($link, 'SELECT * from servico') or die("Erro");
+               while($dados=mysqli_fetch_assoc($sql)){
+                     echo "<option value='".$dados['nome']."'>".$dados['nome']."</option>";
+               }
+               ?>
+             </select> </br>
 
               <div id="botaoEnviar">
         			<input type="submit" name="enviar" value="Cadastrar" id="btnEnviar">
