@@ -11,19 +11,37 @@
      <?php
       include('menuprincipal.php');
       include('menulateral.php');
+
      ?>
     <div id='centro'>
       <div id = 'formulario'>
-        <form method="POST" name="cadastrarusuario" action="cadastrarusuario.php" >
-			         <label> CPF: </label><input type="text" name="cpf" placeholder="CPF" required>
+        <form method="POST" name="cadastrarusuario" action="cadastrarchamado.php">
+			         <label> Título: </label><input type="text" name="titulo" placeholder="Título" required>
 
-        		   <label> Nome: </label><input type="text" name="nome" placeholder="Nome" required>
+               <label> Prioridade: </label><select class="select" name="tipo" required>
 
-               <label> Tipo: </label><select class="select" name="tipo" required>
-                <option value="Usuário Comum"> Usuário Comum</option>
-                <option value="Adminstrador">Administrador</option>
+                <option value="1"> Alta</option>
+
+                <option value="2">Média</option>
+
+                <option value="3">Baixa</option>
+
                </select>
                <br>
+
+               <label> Técnico: </label><select class="select" name="tecnico" required>
+
+                <option value="1"> Alta</option>
+
+                <option value="2">Média</option>
+
+                <option value="3">Baixa</option>
+
+               </select>
+               <br>
+
+
+
 							 <label> Senha: </label><input type="password" name="senha" placeholder="Senha" required>
 
               <div id="botaoEnviar">
