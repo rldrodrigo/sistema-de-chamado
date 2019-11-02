@@ -28,8 +28,8 @@
               while($dados=mysqli_fetch_assoc($sql)){
                    echo "<form method='POST' name='alterarservicobanco' action='deletarservico.php'  >";
                    echo "<label> ID: </label><input class='textField'  name='id' readonly = 'true' value='".$dados['id']."'/>";
-                   echo "<label> Nome: </label><input type='text'  name='nome'  placeholder='".$dados['nome']."'/>";
-                   echo "<label> Descrição: </label><input type='text' name='descricao' placeholder='".$dados['descricao']."'>";
+                   echo "<label> Nome: </label><input type='text'  name='nome'  readonly = 'true' placeholder='".$dados['nome']."'/>";
+                   echo "<label> Descrição: </label><input type='text' name='descricao' readonly = 'true' placeholder='".$dados['descricao']."'>";
                    echo "<div id='botaoEnviar'>";
                    echo "<input type='submit' name='enviar' value='Excluir' id='btnEnviar'>";
                    echo "</div>  </form>";

@@ -21,10 +21,10 @@
         </li>
         <li><a href="#"> Técnico</a>
           <ul>
-            <li><a href="#">Cadastrar Técnico</a></li>
-            <li><a href="#">Consultar Técnico</a></li>
-            <li ><a href="#">Alterar Técnico</a></li>
-            <li ><a href="#">Deletar Técnico</a></li>
+            <li><a href="cadastratecnico.php">Cadastrar Técnico</a></li>
+            <li><a href="consultatecnico.php">Consultar Técnico</a></li>
+            <li ><a href="alteratecnico.php">Alterar Técnico</a></li>
+            <li ><a href="deletatecnico.php">Deletar Técnico</a></li>
           </ul>
         </li>
 
