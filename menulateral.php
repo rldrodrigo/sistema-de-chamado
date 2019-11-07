@@ -1,7 +1,7 @@
 <div id="lateral">
     <div id="menu">
 
-    <h3 class="link-titulo">Sistema de Chamado</h3>
+    <a href="index.php"><h3 class="link-titulo">Sistema de Chamado</h3></a>
       <ul class="box">
         <li><a href="#"> Usuário</a>
           <ul>

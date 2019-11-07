@@ -3,10 +3,10 @@
    <head>
        <meta charset="utf-8"/>
        <title>Sistema de Chamados</title>
-       <link rel="stylesheet" type="text/css"  href="estilo.css" />
-       <link rel="stylesheet" type="text/css"  href="estilomenulateral.css" />
-       <link rel="stylesheet" type="text/css"  href="estiloform.css" />
-       <link rel="stylesheet" type="text/css"  href="estilotabela.css" />
+       <link rel="stylesheet" type="text/css"  href="css/estilo.css" />
+       <link rel="stylesheet" type="text/css"  href="css/estilomenulateral.css" />
+       <link rel="stylesheet" type="text/css"  href="css/estiloform.css" />
+       <link rel="stylesheet" type="text/css"  href="css/estilotabela.css" />
    </head>
    <body>
      <?php
@@ -22,6 +22,7 @@
           <th> Prioridade </th>
           <th> Técnico </th>
           <th> Categoria </th>
+          <th> Hora </th>
           <th> Status </th>
         </tr>
         <?php
@@ -43,6 +44,7 @@
 
             echo "<td>".$dados['tecnico']."</td>";
             echo "<td>".$dados['categoria']."</td>";
+            echo "<td>".$dados['hora']."</td>";
             echo "<td>".$dados['status']."</td>";
             echo "</tr>";
         }
