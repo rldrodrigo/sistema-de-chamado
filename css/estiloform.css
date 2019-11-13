@@ -4,7 +4,7 @@ form {
     margin: 0 auto;
     width: 400px;
     /* Para ver as bordas do formulário */
-    padding: 1em;
+    padding: 5%;
     border: 1px solid #CCC;
     border-radius: 1em;
 }
@@ -35,7 +35,22 @@ input, textarea {
 		margin:2px;
 }
 
+select {
+    border-radius: 20px;
+    text-align: center;
+    /* Para certificar-se que todos os campos de texto têm as mesmas configurações de fonte. Por padrão, textareas ter uma fonte monospace*/
+    font: 1em sans-serif;
 
+    /* Para dar o mesmo tamanho a todos os campo de texto */
+    width: 60%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* Para harmonizar o look & feel das bordas nos campos de texto*/
+    border: 1px solid #999;
+
+        margin:2px;
+}
 
 input:focus, textarea:focus {
     /* Dar um pouco de destaque nos elementos ativos */
@@ -59,19 +74,29 @@ textarea {
 }
 
 #btnEnviar {
-	width: auto;
+	width: 30%;
 	height: 30px;
 	margin: 10px;
 	text-align: center;
-	background-color: #black;
 	font-weight: bold;
 	color: #FFF;
 	font-size: 16px;
 	margin-left: 40%;
+    background-color: #696969;
 
 }
 
 #btnEnviar:hover{
 	border-color: black;
+    background-color: black;
 
+}
+
+#formulario form{
+    margin-top: 10%;
+}
+
+
+.tituloform {
+    text-align: center;
 }

@@ -8,17 +8,17 @@
        <link rel="stylesheet" type="text/css"  href="css/estiloform.css" />
    </head>
    <body>
-     <?php
+    <?php
       include('menuprincipal.php');
       include('menulateral.php');
 
      ?>
     <div id='centro'>
       <div id = 'formulario'>
-        <form method="POST" name="alterarusuario" action="deletarchamado.php" >
-          <h1 class='tituloform'> Deletar Chamado </h1>
-         <label> Digite o ID do Chamado: </label><input type="text" name="id" placeholder="ID" required>
-         <input type="submit" name="enviar1" value="Deletar" id="btnEnviar">
+        <form method="POST" name="deletarusuario" action="deletarusuario.php">
+          <h1 class='tituloform'> Deletar Usuário </h1>
+         <label> CPF: </label><input type="text" name="cpf" placeholder="CPF">
+         <input type="submit" name="enviar1" value="Apagar" id="btnEnviar">
       </form>
       </div>
     </div>

@@ -28,12 +28,12 @@
           </ul>
         </li>
 
-        <li><a href="#"> Serviço</a>
+        <li><a href="#"> Categoria</a>
           <ul>
-            <li><a href="cadastraservico.php">Cadastrar Serviço</a></li>
-            <li><a href="consultaservico.php">Consultar Serviço</a></li>
-            <li ><a href="alteraservico.php">Alterar Serviço</a></li>
-            <li ><a href="deletaservico.php">Deletar Serviço</a></li>
+            <li><a href="cadastraservico.php">Cadastrar Categoria</a></li>
+            <li><a href="consultaservico.php">Consultar Categoria</a></li>
+            <li ><a href="alteraservico.php">Alterar Categoria</a></li>
+            <li ><a href="deletaservico.php">Deletar Categoria</a></li>
           </ul>
         </li>
 

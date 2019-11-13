@@ -16,6 +16,7 @@
     <div id='centro'>
       <div id = 'formulario'>
         <form method="POST" name="cadastrarusuario" action="cadastrarchamado.php">
+            <h1 class='tituloform'> Cadastrar Chamado </h1>
 			         <label> Título: </label><input type="text" name="titulo" placeholder="Título" required>
                <label> Prioridade: </label><select class="select" name="prioridade" required>
                 <option value="1"> Alta</option>
@@ -45,7 +46,7 @@
              </select> </br>
 
               <div id="botaoEnviar">
-        			<input type="submit" name="enviar" value="Cadastrar" id="btnEnviar">
+        			<input type="submit" value="Cadastrar" id="btnEnviar">
               </div>
         </form>
       </div>

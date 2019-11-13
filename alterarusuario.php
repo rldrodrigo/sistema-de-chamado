@@ -3,9 +3,9 @@
    <head>
        <meta charset="utf-8"/>
        <title>Sistema de Chamados</title>
-       <link rel="stylesheet" type="text/css"  href="estilo.css" />
-       <link rel="stylesheet" type="text/css"  href="estilomenulateral.css" />
-       <link rel="stylesheet" type="text/css"  href="estiloform.css" />
+       <link rel="stylesheet" type="text/css"  href="css/estilo.css" />
+       <link rel="stylesheet" type="text/css"  href="css/estilomenulateral.css" />
+       <link rel="stylesheet" type="text/css"  href="css/estiloform.css" />
    </head>
    <body>
      <?php
@@ -34,8 +34,9 @@
                //echo "<label> Tipo: </label><input type='text' name='tipo' placeholder='".$dados['tipo']."'>";
                 echo "<label> Tipo: </label><select class='select' name='tipo'>
                     <option value=''> Tipo </option>
-                    <option value='Secretaria'> Administrador</option>
-                    <option value='Gerente'>Usuário Comum</option>
+                    <option value='Administrador'> Administrador</option>
+                    <option value='Técnico'> Técnico </option>
+                    <option value='Usuário Comum'>Usuário Comum</option>
                </select>";
 
               echo "<br><label> Senha: </label><input type='password' name='senha' placeholder='".$dados['senha']."' >";

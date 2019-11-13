@@ -3,9 +3,9 @@
    <head>
        <meta charset="utf-8"/>
        <title>Sistema de Chamados</title>
-       <link rel="stylesheet" type="text/css"  href="estilo.css" />
-       <link rel="stylesheet" type="text/css"  href="estilomenulateral.css" />
-       <link rel="stylesheet" type="text/css"  href="estiloform.css" />
+       <link rel="stylesheet" type="text/css"  href="css/estilo.css" />
+       <link rel="stylesheet" type="text/css"  href="css/estilomenulateral.css" />
+       <link rel="stylesheet" type="text/css"  href="css/estiloform.css" />
    </head>
    <body>
      <?php
@@ -15,6 +15,7 @@
     <div id='centro'>
       <div id = 'formulario'>
         <form method="POST" name="cadastrartecnico" action="cadastrartecnico.php" >
+              <h1 class='tituloform'> Cadastrar Técnico </h1>
 			         <label> CPF: </label><input type="text" name="cpf" placeholder="CPF" required>
 
         		   <label> Nome: </label><input type="text" name="nome" placeholder="Nome" required>

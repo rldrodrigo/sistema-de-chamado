@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 ?>
 
 <!DOCTYPE html>
@@ -10,19 +10,18 @@ session_start();
        <link rel="stylesheet" type="text/css"  href="css/telalogin.css" />
    </head>
    <body>
-     <?php
-      ?>
+      <h1> SISTEMA DE CHAMADOS </h1>
       <div class='container'>
         <div class='box'>
         <form method="POST" name="alterarusuario" action="login.php" >
-          <label> CPF: </label><input type="text" name="cpf" placeholder="CPF" required><br>
-          <label> Senha: </label><input type="password" name="senha" placeholder="Senha" required><br>
-          <input type="submit" name="enviar1" value="Entrar" id="btnEnviar">
+          <label> CPF: </label><br><input type="text" class='entradadedados' name="cpf" placeholder="CPF" required><br>
+          <label> Senha: </label><br><input type="password" class='entradadedados' name="senha" placeholder="Senha" required><br>
+          <input type="submit" class='botaoEntrar' value="Entrar" id="btnEnviar">
         </form>
       </div>
       </div>
       </table>
-
+      
     </div>
    </body>
 </html>

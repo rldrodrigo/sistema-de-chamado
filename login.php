@@ -14,8 +14,9 @@
           return;
       }
     }
-    echo "Usuário ou senha inválidos";
-    header('Location: telalogin.php');
+    include('telalogin.php');
+    echo '<script> alert("Usuário ou senha incorreto!"); </script>';
+    return;
 		mysqli_query($link, $query);
 
 

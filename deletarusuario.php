@@ -13,5 +13,5 @@
 
         mysqli_query($link,$deleta) or die ("Erro");
 
-        header('Location: deletarusuario.html');
+        header('Location: deletausuario.php');
 ?>

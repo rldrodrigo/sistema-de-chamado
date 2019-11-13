@@ -22,5 +22,5 @@
     }
 
 		mysqli_query($link, $query);
-    header('Location: alterarusuario.html');
+    header('Location: alterausuario.php');
 ?>

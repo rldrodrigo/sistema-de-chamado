@@ -7,7 +7,7 @@
     mysqli_set_charset($link, "utf-8");
 
     $id = $_POST['id'];
-		$nome=$_POST['nome'];
+	$nome=$_POST['nome'];
     $descricao = $_POST['descricao'];
 
 

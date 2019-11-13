@@ -4,9 +4,10 @@
         <head>
             <meta charset="utf-8"/>
             <title>Sistema de Chamados</title>
-            <link rel="stylesheet" type="text/css"  href="estilo.css" />
-            <link rel="stylesheet" type="text/css"  href="estilomenulateral.css" />
-            <link rel="stylesheet" type="text/css"  href="estiloform.css" />
+            <link rel="stylesheet" type="text/css"  href="css/estilo.css" />
+            <link rel="stylesheet" type="text/css"  href="css/estilomenulateral.css" />
+            <link rel="stylesheet" type="text/css"  href="css/estiloform.css" />
+            <link rel="stylesheet" type="text/css" href="css/estilotabela.css">
         </head>
         <body>
           <?php
@@ -15,6 +16,13 @@
           ?>
 
           <div id = 'formulario'>
+             <table>
+                <tr>
+                  <th> ID</th>
+                  <th>Nome</th>
+                  <th>Descrição</th>
+                  <th> Deletar</th>
+                </tr>
             <?php
 
 
@@ -26,16 +34,17 @@
 
               $sql = mysqli_query($link, "SELECT * from servico") or die("Erro");
               while($dados=mysqli_fetch_assoc($sql)){
-                   echo "<form method='POST' name='alterarservicobanco' action='deletarservico.php'  >";
-                   echo "<label> ID: </label><input class='textField'  name='id' readonly = 'true' value='".$dados['id']."'/>";
-                   echo "<label> Nome: </label><input type='text'  name='nome'  readonly = 'true' placeholder='".$dados['nome']."'/>";
-                   echo "<label> Descrição: </label><input type='text' name='descricao' readonly = 'true' placeholder='".$dados['descricao']."'>";
-                   echo "<div id='botaoEnviar'>";
-                   echo "<input type='submit' name='enviar' value='Excluir' id='btnEnviar'>";
-                   echo "</div>  </form>";
+                   echo "<tr><form method='POST' name='alterarservicobanco' action='deletarservico.php'  >";
+                  echo "<td><input class='textField'  name='id' readonly = 'true' value='".$dados['id']."'/></td>";
+                  echo "<td>".$dados['nome']."</td>";
+                  echo "<td>".$dados['descricao']."</td>";
+                  echo "<td><div id='botaoEnviar'>";
+                  echo "<input type='submit' name='enviar' value='Excluir'>";
+                  echo "</div>  </td></form></tr>";
               }
 
      ?>
+   </table>
           </div>
 
    </body>
